@@ -1,0 +1,784 @@
+{
+  "id": "839cd8fc-24db-413e-8629-b3c648482cd9",
+  "version": "2.0",
+  "name": "embrapa_crawl",
+  "url": "http://vitibrasil.cnpuv.embrapa.br",
+  "tests": [{
+    "id": "9a4649fe-3554-4486-b4e6-0cec7653b17f",
+    "name": "csv_downloads",
+    "commands": [{
+      "id": "67065720-8696-4573-960b-bb42d0d84f5d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c0840e6-6c7a-4331-a63e-d4c10f3915a6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1740x1147",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62cbbb8e-8401-4a26-8b83-8ade963944ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(2)",
+      "targets": [
+        ["css=.btn_opt:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[2]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Produção')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b2b582b-184d-4d9f-a40d-e4f9e5fa2e63",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1",
+      "windowTimeout": 2000
+    }, {
+      "id": "84e27f8f-59c0-4f39-bc5e-ed8047fd76f2",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0f662c6-108e-4865-a3fa-cb16d73988e1",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c0d0ef9-dc42-4a57-8b71-c27e2936df70",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(3)",
+      "targets": [
+        ["css=.btn_opt:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[3]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Processamento')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8593b532-6789-4392-bc23-782efe97da7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6726",
+      "windowTimeout": 2000
+    }, {
+      "id": "6eacdf2b-7a08-4cfd-b270-21dac6a2bc1a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8badd1a8-d126-4c1c-ac6f-bb9fc63288e0",
+      "comment": "",
+      "command": "click",
+      "target": "name=opcao",
+      "targets": [
+        ["name=opcao", "name"],
+        ["css=.btn_opt:nth-child(1)", "css:finder"],
+        ["xpath=//button[@name='opcao']", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apresentação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08ea8a41-b258-4061-8618-478fbd1c163e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(3)",
+      "targets": [
+        ["css=.btn_opt:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[3]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Processamento')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65a534e1-005c-4ea9-8215-214d39ac818b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(3)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[2]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Americanas e híbridas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c9aad78-f8c3-4407-8d4c-c07e3777b07f",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6493",
+      "windowTimeout": 2000
+    }, {
+      "id": "22c23577-81d0-4bc7-aee2-043c14ac8d2d",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aef1bebc-a8c1-4236-8a27-71c23237747b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(3)",
+      "targets": [
+        ["css=.btn_opt:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[3]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Processamento')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9ddee58-b4b7-4961-8c82-44de8b4daa58",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(5)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[3]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Uvas de mesa')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49d9e219-7158-4f6c-ae4c-5f828bcba326",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8797",
+      "windowTimeout": 2000
+    }, {
+      "id": "8981e456-8b3a-483f-99d5-fafb4d03d414",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c044e7b-b51a-40fa-ad56-a7a786b9a482",
+      "comment": "",
+      "command": "click",
+      "target": "name=opcao",
+      "targets": [
+        ["name=opcao", "name"],
+        ["css=.btn_opt:nth-child(1)", "css:finder"],
+        ["xpath=//button[@name='opcao']", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apresentação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9427741c-b6ca-4c6d-8b3e-76bfb581f770",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(3)",
+      "targets": [
+        ["css=.btn_opt:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[3]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Processamento')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac2ab8e6-8f08-42cc-88d5-79ba6c9ca649",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(7)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(7)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[4]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Sem classificação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad27563c-0920-44b4-8d91-27b8893bccf4",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win9331",
+      "windowTimeout": 2000
+    }, {
+      "id": "d62c40e2-5439-4154-ade4-e946a93c3260",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2af3e9b-c37b-4dd8-9c7e-e4ac298eb8c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(4)",
+      "targets": [
+        ["css=.btn_opt:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[4]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Comercialização')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1b0e45f-0889-4503-b450-414f13ec9fc2",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1629",
+      "windowTimeout": 2000
+    }, {
+      "id": "c457e9ef-dd0d-4ed0-8397-7375b6eca8de",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91b84ef7-3916-4299-835f-e3983e1e4fe7",
+      "comment": "",
+      "command": "click",
+      "target": "name=opcao",
+      "targets": [
+        ["name=opcao", "name"],
+        ["css=.btn_opt:nth-child(1)", "css:finder"],
+        ["xpath=//button[@name='opcao']", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apresentação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2290fd40-e0d3-4e5e-970c-924025befd07",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(5)",
+      "targets": [
+        ["css=.btn_opt:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[5]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Importação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8877afba-a0ee-4028-8569-7144da558125",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1876",
+      "windowTimeout": 2000
+    }, {
+      "id": "912a28b8-b428-4d05-bc29-311af4964087",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "076eac16-bb50-40c6-99cf-c65f03ba784b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(5)",
+      "targets": [
+        ["css=.btn_opt:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[5]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Importação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52e6eb17-1676-4c3f-b259-864ba3c44b57",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(3)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[2]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Espumantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2544ca69-e460-4788-b71c-80c7ad3feb97",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4480",
+      "windowTimeout": 2000
+    }, {
+      "id": "1bc995fb-fef3-46b8-8f87-02990127c343",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f7d8352-e88b-44e1-8f22-96d98a35f181",
+      "comment": "",
+      "command": "click",
+      "target": "name=opcao",
+      "targets": [
+        ["name=opcao", "name"],
+        ["css=.btn_opt:nth-child(1)", "css:finder"],
+        ["xpath=//button[@name='opcao']", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apresentação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0af3dce8-373c-4ab0-9f27-b227fa7c2b95",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(5)",
+      "targets": [
+        ["css=.btn_opt:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[5]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Importação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3aa0557f-636b-49cc-9b5a-67de1c43f4d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(5)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[3]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Uvas frescas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cece8588-74c5-4136-9393-500bc3429482",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(5)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[3]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Uvas frescas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2326159-bf9d-46fd-b2df-636f035913c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win9692",
+      "windowTimeout": 2000
+    }, {
+      "id": "dc2b50b8-6299-4c06-9ddb-f887b46797f7",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11e74f73-c23e-43ca-94fc-2c7af9ba0015",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(5)",
+      "targets": [
+        ["css=.btn_opt:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[5]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Importação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd860e30-86b7-488c-a638-7f86cdf47eea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(7)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(7)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[4]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Uvas passas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44bce76e-878c-4376-a504-35998c9ee52b",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win2632",
+      "windowTimeout": 2000
+    }, {
+      "id": "8de21677-55e4-4001-b109-af0b5c82eb71",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58b92ad2-3342-4556-8120-e264fdad608d",
+      "comment": "",
+      "command": "click",
+      "target": "name=opcao",
+      "targets": [
+        ["name=opcao", "name"],
+        ["css=.btn_opt:nth-child(1)", "css:finder"],
+        ["xpath=//button[@name='opcao']", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apresentação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d2c3a93-10ff-4c3f-851a-3205199aeb57",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(5)",
+      "targets": [
+        ["css=.btn_opt:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[5]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Importação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50b3a6f5-b604-4fb8-a1e2-06d29f588e45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(9)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(9)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[5]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Suco de uva')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c78238e-a0f7-4863-b7c5-2bbdc6ed1b88",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5035",
+      "windowTimeout": 2000
+    }, {
+      "id": "ff2b0c16-7829-4452-a1b9-6d0b60428d71",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d14f0f2-c693-426b-9739-2843bf6259f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(6)",
+      "targets": [
+        ["css=.btn_opt:nth-child(6)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[6]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[6]", "xpath:idRelative"],
+        ["xpath=//button[6]", "xpath:position"],
+        ["xpath=//button[contains(.,'Exportação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16da9d2e-62c2-4d12-bab7-43c052c07ee0",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8446",
+      "windowTimeout": 2000
+    }, {
+      "id": "ae055b0a-f813-47dd-8739-d733e39b04b6",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d86dd65f-fabb-4a28-a527-4cbb4e6d204d",
+      "comment": "",
+      "command": "click",
+      "target": "name=opcao",
+      "targets": [
+        ["name=opcao", "name"],
+        ["css=.btn_opt:nth-child(1)", "css:finder"],
+        ["xpath=//button[@name='opcao']", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apresentação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "671b7f19-c239-49bc-9fe4-a1c72cc54c2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(6)",
+      "targets": [
+        ["css=.btn_opt:nth-child(6)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[6]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[6]", "xpath:idRelative"],
+        ["xpath=//button[6]", "xpath:position"],
+        ["xpath=//button[contains(.,'Exportação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4559d5c-443d-42a1-91fd-22c5fe662f26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(3)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[2]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Espumantes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e56b0d5f-005f-4327-9149-474ea3e08a1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5295",
+      "windowTimeout": 2000
+    }, {
+      "id": "0c85f84a-1499-4a5d-8ec3-d7f675bd8322",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6271918-a8ad-41b7-9ca7-907ff9aa9e9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(6)",
+      "targets": [
+        ["css=.btn_opt:nth-child(6)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[6]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[6]", "xpath:idRelative"],
+        ["xpath=//button[6]", "xpath:position"],
+        ["xpath=//button[contains(.,'Exportação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbf58972-60c1-4ba3-83f1-ac49352a4049",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(5)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[3]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Uvas frescas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a0717f3-a843-4ff1-8f22-1eb7a56ff1b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .spn_small",
+      "targets": [
+        ["css=td:nth-child(1) .spn_small", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win7973",
+      "windowTimeout": 2000
+    }, {
+      "id": "030660b4-086f-461a-afd2-8f93345fe6cd",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd81d6e9-6c57-421e-b9b9-faddf6450e39",
+      "comment": "",
+      "command": "click",
+      "target": "name=opcao",
+      "targets": [
+        ["name=opcao", "name"],
+        ["css=.btn_opt:nth-child(1)", "css:finder"],
+        ["xpath=//button[@name='opcao']", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apresentação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc8ce8bf-2896-4f21-ae9c-1a10d6c71980",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_opt:nth-child(6)",
+      "targets": [
+        ["css=.btn_opt:nth-child(6)", "css:finder"],
+        ["xpath=(//button[@name='opcao'])[6]", "xpath:attributes"],
+        ["xpath=//p[@id='row_btn']/button[6]", "xpath:idRelative"],
+        ["xpath=//button[6]", "xpath:position"],
+        ["xpath=//button[contains(.,'Exportação')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce850697-92de-4510-b14a-a7b8aba7e39a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn_sopt:nth-child(7)",
+      "targets": [
+        ["css=.btn_sopt:nth-child(7)", "css:finder"],
+        ["xpath=(//button[@name='subopcao'])[4]", "xpath:attributes"],
+        ["xpath=//div/table/tbody/tr/td/form/p/button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Suco de uva')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf0ee721-cf6d-4a6e-b62d-7c9160cad61c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=DOWNLOAD",
+      "targets": [
+        ["linkText=DOWNLOAD", "linkText"],
+        ["css=td:nth-child(1) > .footer_content", "css:finder"],
+        ["xpath=//a[contains(@href, 'download/ExpSuco.csv')]", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"],
+        ["xpath=//a[contains(.,' DOWNLOAD')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8659",
+      "windowTimeout": 2000
+    }, {
+      "id": "3a400a8b-fc7d-418b-b4d5-7e91ef99596b",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e4b4fe69-f3e5-430f-bf30-d74995ec0560",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9a4649fe-3554-4486-b4e6-0cec7653b17f"]
+  }],
+  "urls": ["http://vitibrasil.cnpuv.embrapa.br/"],
+  "plugins": []
+}

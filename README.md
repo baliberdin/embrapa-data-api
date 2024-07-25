@@ -27,6 +27,7 @@ Criando, ativando e executando o projeto com um virtualenv
 ```bash
 virtualenv .venv
 source .venv/bin/activate
+pip install -U pip
 pip install -r requirements.txt
 fastapi dev main.py
 ```
