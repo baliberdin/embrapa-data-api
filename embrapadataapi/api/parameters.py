@@ -40,11 +40,13 @@ class ParameterParser:
                     # não vamos permitir nenhum parâmetro diferente destes e uma Exception deve ser lançada
                     if len(valid_filters) > 0 and k not in valid_filters:
                         raise InvalidFilterException(f"The filter [{k}:{f[k]}] is not valid for list: {valid_filters}")
+                    # Além dos critérios anteriores as chaves e os valores dos filtros não podem ser vazios
                     if (len(k) > 0 and (k in valid_filters or len(valid_filters) == 0)
                             and f[k] and len(f[k]) > 0):
                         parsed_filters[k] = f[k]
                     else:
                         raise InvalidFilterException(f"The filter [{k}:{f[k]}] is not valid for list: {valid_filters}")
+            # Armazena todos os filtros válidos
             self.filters = parsed_filters
         else:
             self.filters = {}

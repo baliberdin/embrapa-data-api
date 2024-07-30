@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python -m pytest ./tests
+python -m pytest -v --log-level=INFO ./tests

@@ -54,7 +54,7 @@ class WebResponse(BaseModel):
         result = ResourceResult(info=info, data=data)
 
         links = [ResourceLink(rel="self", href=f"/{endpoint}"),
-                 ResourceLink(rel="query_example", href=f"/{endpoint}?limit=10&skip=0&filters=ano:2023"),
+                 ResourceLink(rel="query_example", href=f"/{endpoint}?limit=10&skip=0&filters=year:2023"),
                  ResourceLink(rel="parent", href="/")]
 
         query = QueryParams(filters=params.filters, limit=params.limit, skip=params.skip)

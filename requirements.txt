@@ -12,4 +12,5 @@ cryptography==42.0.8
 pyjwt==2.8.0
 pandas==2.2.2
 pytest==8.2.2
+pytest-mock==3.14.0
 sqlalchemy==2.0.31

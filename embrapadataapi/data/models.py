@@ -23,56 +23,56 @@ class Base(DeclarativeBase):
 class Production(Base):
     __tablename__ = 'production'
     id: Mapped[int] = mapped_column(primary_key=True)
-    produto: Mapped[str] = mapped_column(String(100))
+    product: Mapped[str] = mapped_column(String(100))
     control: Mapped[str] = mapped_column(String(100))
-    categoria: Mapped[str] = mapped_column(String(100))
-    ano: Mapped[int] = mapped_column(Integer())
-    quantidade: Mapped[int] = mapped_column(BigInteger())
+    category: Mapped[str] = mapped_column(String(100))
+    year: Mapped[int] = mapped_column(Integer())
+    quantity: Mapped[int] = mapped_column(BigInteger())
     created_at: Mapped[str] = mapped_column(String(25))
 
 
 class Processed(Base):
     __tablename__ = 'processed'
     id: Mapped[int] = mapped_column(primary_key=True)
-    cultivar: Mapped[str] = mapped_column(String(100))
+    cultivation: Mapped[str] = mapped_column(String(100))
     control: Mapped[str] = mapped_column(String(100))
-    categoria: Mapped[str] = mapped_column(String(100))
-    ano: Mapped[int] = mapped_column(Integer())
-    quantidade: Mapped[int] = mapped_column(BigInteger())
+    category: Mapped[str] = mapped_column(String(100))
+    year: Mapped[int] = mapped_column(Integer())
+    quantity: Mapped[int] = mapped_column(BigInteger())
     created_at: Mapped[str] = mapped_column(String(25))
-    classe: Mapped[str] = mapped_column(String(100))
+    type: Mapped[str] = mapped_column(String(100))
 
 
 class Commercial(Base):
     __tablename__ = 'commercial'
     id: Mapped[int] = mapped_column(primary_key=True)
-    produto: Mapped[str] = mapped_column(String(100))
+    product: Mapped[str] = mapped_column(String(100))
     control: Mapped[str] = mapped_column(String(100))
-    categoria: Mapped[str] = mapped_column(String(100))
-    ano: Mapped[int] = mapped_column(Integer())
-    quantidade: Mapped[int] = mapped_column(BigInteger())
+    category: Mapped[str] = mapped_column(String(100))
+    year: Mapped[int] = mapped_column(Integer())
+    quantity: Mapped[int] = mapped_column(BigInteger())
     created_at: Mapped[str] = mapped_column(String(25))
 
 
 class Importation(Base):
     __tablename__ = 'importation'
     id: Mapped[int] = mapped_column(primary_key=True)
-    país: Mapped[str] = mapped_column(String(100))
-    classe: Mapped[str] = mapped_column(String(100))
-    ano: Mapped[int] = mapped_column(Integer())
-    quantidade: Mapped[int] = mapped_column(BigInteger())
-    valor: Mapped[int] = mapped_column(Double())
+    country: Mapped[str] = mapped_column(String(100))
+    type: Mapped[str] = mapped_column(String(100))
+    year: Mapped[int] = mapped_column(Integer())
+    quantity: Mapped[int] = mapped_column(BigInteger())
+    amount: Mapped[int] = mapped_column(Double())
     created_at: Mapped[str] = mapped_column(String(25))
 
 
 class Exportation(Base):
     __tablename__ = 'exportation'
     id: Mapped[int] = mapped_column(primary_key=True)
-    país: Mapped[str] = mapped_column(String(100))
-    classe: Mapped[str] = mapped_column(String(100))
-    ano: Mapped[int] = mapped_column(Integer())
-    quantidade: Mapped[int] = mapped_column(BigInteger())
-    valor: Mapped[int] = mapped_column(Double())
+    country: Mapped[str] = mapped_column(String(100))
+    type: Mapped[str] = mapped_column(String(100))
+    year: Mapped[int] = mapped_column(Integer())
+    quantity: Mapped[int] = mapped_column(BigInteger())
+    amount: Mapped[int] = mapped_column(Double())
     created_at: Mapped[str] = mapped_column(String(25))
 
 

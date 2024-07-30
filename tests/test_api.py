@@ -62,25 +62,25 @@ def test_should_parse_valid_parameters_with_filter_keys():
 
 def test_should_raise_exception_for_invalid_parameters_with_filter_keys():
     with pytest.raises(InvalidFilterException):
-        ParameterParser(skip=10, limit=10, filters="ano:2023", filter_keys=["categoria"])
+        assert ParameterParser(skip=10, limit=10, filters="ano:2023", filter_keys=["categoria"])
 
 
 def test_should_raise_exception_for_invalid_parameter_value_with_filter_keys():
     with pytest.raises(InvalidFilterException):
-        ParameterParser(skip=10, limit=10, filters="ano:", filter_keys=["ano"])
+        assert ParameterParser(skip=10, limit=10, filters="ano:", filter_keys=["ano"])
 
 
 def test_should_raise_exception_for_invalid_parameter_value_without_filter_keys():
     with pytest.raises(InvalidFilterException):
-        ParameterParser(skip=10, limit=10, filters="ano:")
+        assert ParameterParser(skip=10, limit=10, filters="ano:")
 
 
 def test_should_raise_exception_for_invalid_parameter_key_without_filter_keys():
     with pytest.raises(InvalidFilterException):
-        ParameterParser(skip=10, limit=10, filters=":2023")
+        assert ParameterParser(skip=10, limit=10, filters=":2023")
 
     with pytest.raises(InvalidFilterException):
-        ParameterParser(skip=10, limit=10, filters=" :2023")
+        assert ParameterParser(skip=10, limit=10, filters=" :2023")
 
 
 def test_should_parse_valid_multi_parameter_filters():

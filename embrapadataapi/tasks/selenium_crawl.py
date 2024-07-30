@@ -9,6 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from embrapadataapi.configuration.environment import JobConfig
 from embrapadataapi.data.transform import *
 from embrapadataapi.tasks.jobs import AbstractJob
+import traceback
 
 logger = get_logger(__name__)
 
@@ -26,6 +27,7 @@ class EmbrapaCrawlJob(AbstractJob):
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
+        # Define o diretório de downloadas para o Selenium salvar os arquivos
         prefs = {"profile.default_content_settings.popups": 0,
                  "download.default_directory": self.config.params['downloaded_data_path']}
         options.add_experimental_option("prefs", prefs)
@@ -156,15 +158,19 @@ class EmbrapaCrawlJob(AbstractJob):
             self.vars["win8659"] = self._wait_for_window(2000)
             self.driver.switch_to.window(self.vars["root"])
         except Exception as e:
+            traceback.print_exc()
             logger.warn(f"Erro ao executar o scraping do site da embrapa. {e}")
-            raise e
         finally:
             self.close()
 
     def run(self):
+        # Executa a navegação no site da Embrapa e faz o Download dos arquivos
         self.do_crawl()
-        create_production_model(self.config.params['downloaded_data_path'])
-        create_process_model(self.config.params['downloaded_data_path'])
-        create_commercial_model(self.config.params['downloaded_data_path'])
-        create_import_model(self.config.params['downloaded_data_path'])
-        create_export_model(self.config.params['downloaded_data_path'])
+
+        # Executa os ETLs dos dados CSV que foram baixados do site da embrapa
+        # Cada passo abaixo é referente a um tipo de dado/modelo
+        execute_production_model_etl(self.config.params['downloaded_data_path'])
+        execute_process_model_etl(self.config.params['downloaded_data_path'])
+        execute_commercial_model_etl(self.config.params['downloaded_data_path'])
+        execute_import_model_etl(self.config.params['downloaded_data_path'])
+        execute_export_model_etl(self.config.params['downloaded_data_path'])
