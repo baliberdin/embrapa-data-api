@@ -26,6 +26,22 @@ class JobConfig(BaseModel):
     clazz: str
 
 
+class AuthenticationConfig(BaseModel):
+    """
+    Classe que define os dados de autenticação
+    """
+    # Nome do usuário para login
+    username: str
+    # Senha do usuário em formato de hash
+    password: str
+    # Key para criar o hash das senhas
+    secret_key: str
+    # Tipo de algoritmo utilizado na autenticação
+    algorithm: str
+    # Tempo de vida em minutos para a validade do token, por padrão 2 minutos
+    expires_minutes: int = 2
+
+
 class AppConfig(BaseModel):
     """
     Classe que define as configurações da API
@@ -34,6 +50,8 @@ class AppConfig(BaseModel):
     application_name: str
     # Caminho do arquivo de dados usado pelo Sqlite3 ou :memory: caso queira usar banco em memória
     database_name: str
+    # Configurações de autenticação
+    auth: AuthenticationConfig
     # Lista de jobs para serem agendados.
     jobs: list[JobConfig]
 
