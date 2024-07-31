@@ -1,4 +1,5 @@
 import traceback
+import jwt
 
 from fastapi import FastAPI, HTTPException
 
@@ -29,6 +30,7 @@ async def root() -> list[ResourceLink]:
     Returns: list[ResourceLink]
     """
     links = list(map(lambda a: ResourceLink(href=f"/{a}", rel="resource"), resources.keys()))
+    links.append(ResourceLink(href="/docs", rel="docs"))
     links.append(ResourceLink(href="/", rel="self"))
     return links
 
@@ -40,11 +42,11 @@ async def generic_resource(resource_name: str, limit: int = parameters.default_l
 
     Args:
         resource_name: str - Nome do recurso que será chamado.
-        limit: int - Quantidade limit de registros que deve ser retornado. Padrão 10
+        limit: int - Quantidade limite de registros que deve ser retornado. Padrão 100
         skip: int - Quantidade de registros que devem ser ignorados antes de começar a contar o limit.
             Deve ser usado junto com o limit para criar a paginação dos recursos
         filters: str - Lista de filtros a serem aplicados aos recursos. Em caso de múltiplos filtros,
-            deve-se, separá-los por vírgula. Exemplo: filters=ano:2023,classe:Suco
+            deve-se, separá-los por vírgula. Exemplo: filters=year:2023,type:Suco
     Returns:
         WebResponse: JSON que representa os dados consultados contendo a lista dos registros encontrados, metadados
             sobre as quantidades e links de navegação

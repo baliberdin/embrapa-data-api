@@ -83,7 +83,7 @@ def execute_commercial_model_etl(download_path: str):
         logger.warn(f"Erro ao processar os dados da aba de comercio da embrapa")
 
 
-def execute_import_model_etl(download_path: str):
+def execute_importation_model_etl(download_path: str):
     file_names = [{"file": "ImpEspumantes.csv", "separator": ";", "type": "Espumantes"},
                   {"file": "ImpFrescas.csv", "separator": ";", "type": "Uvas Frescas"},
                   {"file": "ImpPassas.csv", "separator": ";", "type": "Uvas Passas"},
@@ -105,7 +105,7 @@ def execute_import_model_etl(download_path: str):
         logger.warn(f"Erro ao processar os dados da aba de importação da embrapa")
 
 
-def execute_export_model_etl(download_path: str):
+def execute_exportation_model_etl(download_path: str):
     file_names = [{"file": "ExpEspumantes.csv", "separator": ";", "type": "Espumantes"},
                   {"file": "ExpUva.csv", "separator": ";", "type": "Uvas Frescas"},
                   {"file": "ExpSuco.csv", "separator": ";", "type": "Sucos de Uva"},

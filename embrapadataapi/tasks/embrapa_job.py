@@ -27,15 +27,18 @@ class EmbrapaCrawlJob(AbstractJob):
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
+        options.timeouts = {"pageLoad": 10000}
+
         # Define o diretório de downloadas para o Selenium salvar os arquivos
-        prefs = {"profile.default_content_settings.popups": 0,
+        external_options = {"profile.default_content_settings.popups": 0,
                  "download.default_directory": self.config.params['downloaded_data_path']}
-        options.add_experimental_option("prefs", prefs)
+        options.add_experimental_option("prefs", external_options)
         logger.info(f"Pasta de downloads definida para: {self.config.params['downloaded_data_path']}")
 
         # Inicia o WebDriver do Chrome (Navegador)
         self.driver = webdriver.Chrome(
             service=Service(ChromeDriverManager(driver_version="126.0.6478.182").install()), options=options)
+        # Variável para guardar as diversas informações de navegação do selenium como janelas e handlers
         self.vars = {}
 
     def close(self):
@@ -172,5 +175,5 @@ class EmbrapaCrawlJob(AbstractJob):
         execute_production_model_etl(self.config.params['downloaded_data_path'])
         execute_process_model_etl(self.config.params['downloaded_data_path'])
         execute_commercial_model_etl(self.config.params['downloaded_data_path'])
-        execute_import_model_etl(self.config.params['downloaded_data_path'])
-        execute_export_model_etl(self.config.params['downloaded_data_path'])
+        execute_importation_model_etl(self.config.params['downloaded_data_path'])
+        execute_exportation_model_etl(self.config.params['downloaded_data_path'])
