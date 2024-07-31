@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta, timezone
-from typing import Annotated, Union
+from typing import Annotated
 
 import jwt
 from fastapi import HTTPException, Depends, status
@@ -21,12 +21,6 @@ class Token(BaseModel):
     access_token: str
     # Tipo do token (Bearer)
     token_type: str = "bearer"
-
-
-#class TokenData(BaseModel):
-#    """Classe que define os dados do Token JWT descriptografado"""
-#    # Nome do usuário
-#    username: Union[str, None] = None
 
 
 class User(BaseModel):
