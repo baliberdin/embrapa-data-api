@@ -31,6 +31,7 @@ async def root() -> list[ResourceLink]:
     Returns: list[ResourceLink]
     """
     links = list(map(lambda a: ResourceLink(href=f"/{a}", rel="resource"), resources.keys()))
+    links.append(ResourceLink(href="/token", rel="authentication"))
     links.append(ResourceLink(href="/docs", rel="docs"))
     links.append(ResourceLink(href="/", rel="self"))
     return links
@@ -41,7 +42,7 @@ async def request_token(
     form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
 ) -> Token:
     """
-    Método utilizado para soliscitar um token de autenticação para a API
+    Método utilizado para solicitar um token de autenticação para a API
     Args:
         form_data: Dados do usuário submetidos via post. username, password
     Returns:
@@ -88,7 +89,7 @@ async def generic_resource(current_user: Annotated[User, Depends(get_current_use
         try:
             # Pega o recurso da lista de recursos
             resource = resources[resource_name]
-            # Soliscita o service para esse recurso
+            # Solicita o service para esse recurso
             service = services.get_service(resource)
             # Processa os parâmetros que foram passados para a API via querystring
             params = ParameterParser(limit=limit, skip=skip, filters=filters,
