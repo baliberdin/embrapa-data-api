@@ -39,9 +39,11 @@ apt install -y ./google-chrome-stable_current_amd64.deb
 
 ## Acessando a API
 Para acessar a API basta abrir o endereço abaixo em um navegador.
+```
 http://localhost:8000
+```
 
-Os recursos / (index) e o /docs são públicos e podem ser caessados sem a necessidade de login, já os recursos de dados 
+Os recursos / (index) e o /docs são públicos e podem ser acessados sem a necessidade de login, já os recursos de dados 
 precisam de um token JWT.
 
 ### Requisitando um token JWT
@@ -62,6 +64,15 @@ Uma vez com o token em mãos, para acessar os recursos que necessitam de autenti
 é preciso enviar o header Authorization com o access token da seguinte forma:
 ```
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlbWJyYXBhIiwiZXhwIjoxNzIyNDc1NDI2fQ.L7tFD1h3wPAgGkoUolD9H3V50r2BRksrcO1W1AdE_P8
+```
+### Filtrando/Paginando os recursos
+Para filtrar e paginar um recurso é necessário fazer uso dos parâmetros, **limit**, **skip** e **filters**.
+O limit e skip sâo utilizados para paginar assim como em queries SQL. Já os filters é um campo que recebe múltiplos 
+filtros separados por vírgula e que executa uma clausa AND entre todos os filtros.
+
+Os filtros permitidos depende de cada recurso e qualquer campo de um registro de recurso pode ser utilizado. Exemplo:
+```
+http://localhost:8000/production?limit=10&skip=0&filters=year:2023,category:VINHO DE MESA
 ```
 
 ## Configurações
