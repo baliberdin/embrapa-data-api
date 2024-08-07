@@ -123,7 +123,12 @@ Durante o processo de startup os jobs são executados pela primeira vez e, somen
 Após a conclusão da inicialização, os jobs serão executados em loop respeitando o intervalo de tempo definido no arquivo de configurações.
 
 ### Armazenamento
-Uma vez que os dados tenham sido capturados do site da Embrapa eles são armazenados em um banco sqlite3. Quando uma nova versão dos dados é ingerida, as tabelas que representam cada um dos recursos (Produção, Processamento, Comercialização, Importação, Exportação) são subrescritas e a coluna `created_at` representa a data em que os arquivos foram escritos no disco.
+Uma vez que os dados tenham sido capturados do site da Embrapa eles são armazenados em um banco sqlite3. 
+Quando uma nova versão dos dados é ingerida, as tabelas que representam cada um dos recursos (Produção, Processamento, 
+Comercialização, Importação, Exportação) são subrescritas e a coluna `created_at` representa a data em que os arquivos 
+foram escritos no disco.
+
+O banco sqlite é escrito em disco ou memória de acordo com a configuração no arquivo `env.yaml`
 
 # Testes
 Rodando os testes localmente
