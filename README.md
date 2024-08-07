@@ -118,9 +118,9 @@ O sistema é dividido entre uma API e um Scheduler que executa jobs de forma ass
 ![Arquitetura da API](./docs/images/api_archytecture.jpg "Arquitetura da API")
 
 ### Inicialização
-Durante o processo de startup os jobs são executados pela primeira vez e somente ao final dessa execução dos jobs é que a API fica disponível para acesso. Se algum erro acontecer durante a execução desses jobs da inicialização, por falha ao site da embrapa por exemplo, os dados que já estão na pasta de downloads serão utilizados para fazer a ingestão inicial.
+Durante o processo de startup os jobs são executados pela primeira vez e, somente ao final dessa execução, é que a API fica disponível para acesso. Se algum erro acontecer durante a execução desses jobs da inicialização, por falha ao acessar o site da embrapa por exemplo, os dados que já estão na pasta de downloads serão utilizados para fazer a ingestão inicial.
 
 Após a conclusão da inicialização, os jobs serão executados em loop respeitando o intervalo de tempo definido no arquivo de configurações.
 
 ### Armazenamento
-Uma vez que os dados tenham sido capturados do site da Embrapa eles são armazenados em um bano sqlite3. Quando uma nova versão dos dados é ingerida, as tabelas que representam cada um dos recursos (Produção, Processamento, Comercialização, Importação, Exportação) são subrescritas e a coluna `created_at` representa a data em que os arquivos foram escritos no disco.
+Uma vez que os dados tenham sido capturados do site da Embrapa eles são armazenados em um banco sqlite3. Quando uma nova versão dos dados é ingerida, as tabelas que representam cada um dos recursos (Produção, Processamento, Comercialização, Importação, Exportação) são subrescritas e a coluna `created_at` representa a data em que os arquivos foram escritos no disco.
