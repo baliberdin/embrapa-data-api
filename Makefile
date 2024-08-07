@@ -10,5 +10,8 @@ run: build
 run-bash: build
 	@docker run --rm -it --name ${IMAGE_NAME} -p ${PORT}:8000 --entrypoint bash ${IMAGE_NAME}
 
-test: build
+test-docker: build
 	@docker run --rm -it --name ${IMAGE_NAME} -p ${PORT}:8000 --entrypoint /opt/${IMAGE_NAME}/bin/test.sh ${IMAGE_NAME}
+
+test-local:
+	./bin/test.sh

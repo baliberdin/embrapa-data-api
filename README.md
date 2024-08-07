@@ -124,3 +124,13 @@ Após a conclusão da inicialização, os jobs serão executados em loop respeit
 
 ### Armazenamento
 Uma vez que os dados tenham sido capturados do site da Embrapa eles são armazenados em um banco sqlite3. Quando uma nova versão dos dados é ingerida, as tabelas que representam cada um dos recursos (Produção, Processamento, Comercialização, Importação, Exportação) são subrescritas e a coluna `created_at` representa a data em que os arquivos foram escritos no disco.
+
+# Testes
+Rodando os testes localmente
+```bash
+make test-local
+```
+Rodando os testes de forma isolada via Docker
+```bash
+make test-docker
+```
