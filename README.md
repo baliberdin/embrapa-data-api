@@ -139,3 +139,9 @@ Rodando os testes de forma isolada via Docker
 ```bash
 make test-docker
 ```
+
+# MVP
+Para uma versão inicial do projeto o objetivo seria ter um modelo que pudesse predizer os dados futuros de produção, comercialização, importaçao etc. 
+sobre a Embrapa, isso poderia ajudar no planejamento e investimentos.
+
+![MVP](./docs/images/mvp.png "MVP")
