@@ -22,6 +22,7 @@ class EmbrapaCrawlJob(AbstractJob):
     def __init__(self, config: JobConfig):
         super().__init__(config)
 
+    def _do_prepare_crawl(self):
         # Configura diversos parâmetros do navegador para fazer o acesso ao site da Embrapa
         options = Options()
         options.add_argument('--headless')
@@ -63,6 +64,8 @@ class EmbrapaCrawlJob(AbstractJob):
         O passo a passo é baseado em Selenium IDE
         """
         try:
+            # Configura o navegador
+            self._do_prepare_crawl()
             self.driver.get(self.config.params['url'])
             self.driver.set_window_size(1740, 1147)
 

@@ -10,17 +10,30 @@ engine = get_engine()
 
 
 class Base(DeclarativeBase):
+    """Classe base para os modelos que serão armazenados no banco de dados"""
     pass
 
     @staticmethod
     def get_table_schema(model: type[DeclarativeBase]):
+        """Método que retorna o schema da tabela em um formato de dicionário
+        Args:
+            model: Uma instância que implemente DeclarativeBase
+        Returns:
+            dict: Schema do modelo
+        """
+        # Inicia um dict vazio que será populado com o schema
         schema = {}
+        # Itera sobre as colunas do modelo
         for column in model.__table__.columns:
+            # Adiciona ao dict uma referência do nome da coluna com o tipo do dado.
             schema[column.name] = column.type
+        # Retorna o schema
         return schema
 
 
 class Production(Base):
+    """Classe que será responsável por representar o modelo de Produção dos dados da embrapa"""
+    # Nome da tabela no banco de dados e em seguida os campos
     __tablename__ = 'production'
     id: Mapped[int] = mapped_column(primary_key=True)
     product: Mapped[str] = mapped_column(String(100))
@@ -32,6 +45,8 @@ class Production(Base):
 
 
 class Processed(Base):
+    """Classe que será responsável por representar o modelo de Processamento dos dados da embrapa"""
+    # Nome da tabela no banco de dados e em seguida os campos
     __tablename__ = 'processed'
     id: Mapped[int] = mapped_column(primary_key=True)
     cultivation: Mapped[str] = mapped_column(String(100))
@@ -44,6 +59,8 @@ class Processed(Base):
 
 
 class Commercial(Base):
+    """Classe que será responsável por representar o modelo de Comercialização dos dados da embrapa"""
+    # Nome da tabela no banco de dados e em seguida os campos
     __tablename__ = 'commercial'
     id: Mapped[int] = mapped_column(primary_key=True)
     product: Mapped[str] = mapped_column(String(100))
@@ -55,6 +72,8 @@ class Commercial(Base):
 
 
 class Importation(Base):
+    """Classe que será responsável por representar o modelo de Importação dos dados da embrapa"""
+    # Nome da tabela no banco de dados e em seguida os campos
     __tablename__ = 'importation'
     id: Mapped[int] = mapped_column(primary_key=True)
     country: Mapped[str] = mapped_column(String(100))
@@ -66,6 +85,8 @@ class Importation(Base):
 
 
 class Exportation(Base):
+    """Classe que será responsável por representar o modelo de Exportação dos dados da embrapa"""
+    # Nome da tabela no banco de dados e em seguida os campos
     __tablename__ = 'exportation'
     id: Mapped[int] = mapped_column(primary_key=True)
     country: Mapped[str] = mapped_column(String(100))
@@ -77,4 +98,5 @@ class Exportation(Base):
 
 
 logger.info("Creating database tables")
+# Executa a criação das tabelas no banco sqlite3
 Base.metadata.create_all(engine)
